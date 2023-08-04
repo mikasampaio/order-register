@@ -26,7 +26,9 @@ function App() {
 
   async function addNewOrder(values) {
 
-    const { data: newOrder } = await axios.post("http://localhost:3002/order",
+    const url = "https://api-register-hamburger.vercel.app"
+
+    const { data: newOrder } = await axios.post(`${url}/order`,
       {
         order: values.Pedido,
         clientName: values.NomeCliente

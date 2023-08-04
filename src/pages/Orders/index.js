@@ -14,9 +14,11 @@ function ListOrders() {
   const [order, setOrder] = useState([])
   const history = useHistory()
 
+  const url = "https://api-register-hamburger.vercel.app"
+
   useEffect(() => {
     async function newOrders() {
-      const { data: newOrder } = await axios.get("http://localhost:3002/order")
+      const { data: newOrder } = await axios.get(`${url}/order`)
 
       setOrder(newOrder)
     }
@@ -26,7 +28,7 @@ function ListOrders() {
   }, [])
 
   async function deleteOrder(userId) {
-    await axios.delete(`http://localhost:3002/order/${userId}`)
+    await axios.delete(`${url}/order/${userId}`)
 
     const newOrder = order.filter(user => user.id !== userId)
 
