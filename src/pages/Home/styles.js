@@ -11,7 +11,7 @@ export const Container = Styled.div`
 `
 
 export const Image = Styled.img`
-    width: 330px;
+    width: 300px;
 `
 
 export const Formulario = Styled.div`

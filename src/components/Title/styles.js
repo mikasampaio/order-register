@@ -6,6 +6,6 @@ export const H1 = Styled.h1`
     font-size: 28px;
     line-height: 33px;
     color: #FFFFFF;
-    margin: 15px 0;
+    margin-top: 15px;
     text-align: center;
 `
